@@ -175,7 +175,7 @@ $light_gray:#eee;
 .login-container {
   min-height: 100%;
   width: 100%;
-  background:url(../../assets/bg2.jpg);
+  background: $bg;
   background-size: cover;
   overflow: hidden;
 

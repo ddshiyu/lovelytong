@@ -1,27 +1,9 @@
 <template>
-  <div class="mt-6">
+  <div class="">
+    <div class="banner"></div>
     <div class="container d-flex">
-      <div class="content">
-        <div>
-          <loading v-if='showLoading'></loading>
-          <div class="bg-white reco-wrap mb-5" v-for="item in category" :key="item._id">
-            <div>
-              <item-header :title='item.title'></item-header>
-            </div>
-            <div class="p-4">
-              <ul class="reco-item-wrap d-flex f-wrap">
-                <li class="d-flex ai-center px-5 fs-s" v-for="reco in item.reco" :key="reco._id">
-                  <a :href='reco.url' class="d-flex ai-center t-center px-4" target="_blank" rel='noopener noreferrer'>
-                    <img class="" v-lazy="reco.imageUrl" width="20" alt="">
-                    <span  class="ml-5">{{reco.title}}</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="right">
+      <article-list></article-list>
+      <!-- <div class="right">
         <div class="userCard"></div>
         <div class="hotMess bg-white mb-6">
           <right-mess :hotMess='hotMess' title='v2热点'></right-mess>
@@ -30,7 +12,7 @@
           <img src="https://gank.io/images/d6bba8cf5b8c40f9ad229844475e9149" width="100%" alt="">
           <h4 class="bg-white p-2">干货</h4>
         </router-link>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -40,6 +22,7 @@ import { getRecommend, getCategory, getHotMess } from '@/api/recommend'
 import itemHeader from '@/components/ItemHeader'
 import rightMess from '@/components/rightMess'
 import loading from '@/components/loading'
+import articleList from '../blog/index'
 import axios from 'axios'
 export default {
   data() {
@@ -53,35 +36,36 @@ export default {
   components: {
     itemHeader,
     rightMess,
-    loading
+    loading,
+    articleList
   },
   computed: {
   },
   created() {
-    this.fetchData()
+    // this.fetchData()
   },
   methods: {
-    async fetchData() {
-      this.showLoading = true
-      let res
-      const resRe = await getRecommend()
-      this.recommend = resRe.data
-      const resCa = await getCategory()
-      this.category = resCa.data
-      this.category.forEach((item) => {
-        item.reco = []
-        this.recommend.forEach((s) => {
-          if(item._id === s.category._id) {
-            item.reco.push(s)
-          }
-        })
-      })
-      this.showLoading = false
-      if (document.documentElement.clientWidth > 600 || document.body.clientWidth > 600) {
-        const resHot = await getHotMess()
-        this.hotMess = resHot.data
-      }
-    },
+    // async fetchData() {
+    //   this.showLoading = true
+    //   let res
+    //   const resRe = await getRecommend()
+    //   this.recommend = resRe.data
+    //   const resCa = await getCategory()
+    //   this.category = resCa.data
+    //   this.category.forEach((item) => {
+    //     item.reco = []
+    //     this.recommend.forEach((s) => {
+    //       if(item._id === s.category._id) {
+    //         item.reco.push(s)
+    //       }
+    //     })
+    //   })
+    //   this.showLoading = false
+    //   if (document.documentElement.clientWidth > 600 || document.body.clientWidth > 600) {
+    //     const resHot = await getHotMess()
+    //     this.hotMess = resHot.data
+    //   }
+    // },
   }
 }
 </script>
@@ -131,6 +115,12 @@ export default {
       text-decoration: underline;
     }
   }
+}
+.banner {
+  width: 100%;
+  height: 500px;
+  background: url('../../assets/banner.png');
+  background-size: cover;
 }
 
 </style>

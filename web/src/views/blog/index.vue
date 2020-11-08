@@ -1,7 +1,7 @@
 <template>
   <div class='mt-6'>
     <div class="container d-flex">
-      <div class="content">
+      <div class="content bg-white pl-3">
         <p class='t-center' v-if='loadEnd'>- - - - - 没有东西哦 - - - -</p>
         <loading v-if='isLoad'></loading>
         <div>
@@ -24,7 +24,7 @@
           </div>
         </div>
       </div>
-      <div class="right">
+      <!-- <div class="right">
         <div class="recommend-read bg-white mb-7">
           <right-mess title='推荐阅读' :hotMess='hotArticles'></right-mess>
         </div>
@@ -37,7 +37,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

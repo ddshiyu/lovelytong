@@ -3,14 +3,14 @@
     <div class="container pc-header d-flex ai-center">
       <div class="logo">
         <router-link to='/'>
-          <img height='64' src="@/assets/logo5.jpg" alt="">
+          <h1>logo</h1>
         </router-link>
       </div>
       <ul class="d-flex ml-5 reco-list">
         <li v-for='(item, index) in tabTitle' class="px-4" :class="{'is-active':tabIndex===index}" :key='index' @click='changeTab(item.route, index)'>{{item.title}}</li>
       </ul>
-      <div class="ml-6 fs-s">{{time}}</div>
-      <div v-if='userInfo' class="avatar d-flex ai-center">
+      <!-- <div class="ml-6 fs-s">{{time}}</div> -->
+      <!-- <div v-if='userInfo' class="avatar d-flex ai-center">
         <span class="fs-s mr-2">{{userInfo.name}}</span>
         <div @click="loginOut">
           <img class="cur" width='32' height='32' v-lazy="userInfo.avatar_url" alt="">
@@ -19,7 +19,7 @@
       <div v-else class="d-flex flex-1 jc-center">
         <div class="fs-xs" v-if='loginNow'>{{loginInfo}}</div>
         <button type='button' class="btn text-white" @click="login" v-else>登录</button>
-      </div>
+      </div> -->
     </div>
     <!-- 移动端 -->
     <div class="phone-header">
@@ -69,27 +69,27 @@ export default {
       time: '',
       tabTitle: [
         {
-          title: '推荐',
+          title: '标题1',
           route: '/'
         },
         {
-          title: '博客',
+          title: '标题1',
           route: '/blog'
         },
         {
-          title: '工具',
+          title: '标题1',
           route: '/tools'
         },
         {
-          title: 'issue',
+          title: '标题1',
           route: '/issue'
         },
         {
-          title: '历程',
+          title: '标题1',
           route: '/course'
         },
         {
-          title: '关于',
+          title: '标题1',
           route: '/about'
         }
       ],

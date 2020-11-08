@@ -5,7 +5,7 @@
     <bottom-footer v-if='$route.path !=="/recommend/item"'></bottom-footer>
     <transition name='fade'>
       <div class="to-Top cur" @click="handleToTop">
-        <img v-if='showToTop' src="@/assets/backToTop.png" alt="" width="70">
+        <img v-if='showToTop' src="@/assets/toTop.png" alt="" width="70">
       </div>
     </transition> 
   </div>
