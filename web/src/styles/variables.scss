@@ -1,0 +1,55 @@
+$colors: (
+  'article-content': #6E6E6E,
+  'article-title': #3A3A3F,
+  'acticle-border': #ECEBEB,
+  'main-color': #2f5d75,
+  'white': #fff,
+  'footer': #a1a1a1
+);
+
+$font-sizes: (
+  xs: 12px,
+  s: 14px,
+  m: 16px,
+  l: 18px,
+  xl: 20px
+);
+
+$flex-jc: (
+  start: flex-start,
+  center: center,
+  end: flex-end,
+  between: space-between,
+  around: space-around
+);
+
+$flex-ai: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch,
+);
+
+// 间距
+$space-types: (
+  p: padding,
+  m: margin
+);
+
+$space-directions: (
+  t: top,
+  b: bottom,
+  l: left,
+  r: right
+);
+
+$space-sizes: (
+  0: 0,
+  1: 5px,
+  2: 10px,
+  3: 12px,
+  4: 16px,
+  5: 20px,
+  7: 30px,
+  6: 60px,
+);
