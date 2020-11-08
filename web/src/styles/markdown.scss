@@ -1,0 +1,196 @@
+/*对 markdown 样式的补充*/
+.article-content{
+  pre {
+    display: block;
+    padding: 10px;
+    margin: 15px 0 15px 0;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #abb2bf;
+    background: #282c34;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: auto;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 10px;
+    border-radius: 4px;
+  }
+  h1,h2,h3,h4,h5,h6{
+    margin-top: 1em;
+    /* margin-bottom: 1em; */
+  }
+  strong {
+    font-weight: bold;
+  }
+  em {
+    font-style: italic;
+  }
+  a {
+    color: blue;
+  }
+  ul {
+    list-style-type: disc;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  code:not([class]) {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #eee;
+    // background-color: RGBA(59, 170, 250, .1);
+    border-radius: 4px;
+  }
+  img{
+    /* 图片居中 */
+    margin: 20px auto;
+    display: flex;
+    width: 100%;
+    box-shadow: 2px 4px 7px #999;
+    cursor: url(../assets/coverAdd.png), auto;
+  }
+
+  blockquote {
+    border-left: 4px solid #8fc6ff;
+    padding: 0 15px;
+    color: #333;
+    background: RGBA(64, 184, 250, .1);
+  }
+  font-family: Optima-Regular, Optima, PingFangTC-Light, PingFangSC-light, PingFangTC-light;
+  line-height: 30px;
+  word-spacing: 2px;
+  color: #2b2b2b;
+  letter-spacing: 2px;
+  #content {
+    font-size: 16px;
+  }
+
+  ul, ol {
+    color: #333333;
+    margin: 1.5em 0 0 25px;
+  }
+
+  h1, h2 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+}
+
+.article-toc {
+  width: 250px;
+  padding:100px 20px;
+  position: fixed;
+  ol, ul {
+    width: 100%;
+    li {
+      width: 100%;
+    }
+    list-style-type: disc;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: .7em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 20px;
+  }
+  a:hover {
+    color: #AED9F9;
+  }
+}
+
+
+
+.hljs {
+  display:block;
+  padding:.5em;
+  background:#232323;
+  color:#e6e1dc
+}
+.hljs-comment, .hljs-template_comment, .hljs-javadoc, .hljs-shebang {
+  color:#bc9458;
+  font-style:italic
+}
+.hljs-keyword, .ruby .hljs-function .hljs-keyword, .hljs-request, .hljs-status, .nginx .hljs-title, .method, .hljs-list .hljs-title {
+  color:#c26230
+}
+.hljs-string, .hljs-number, .hljs-regexp, .hljs-tag .hljs-value, .hljs-cdata, .hljs-filter .hljs-argument, .hljs-attr_selector, .apache .hljs-cbracket, .hljs-date, .tex .hljs-command, .markdown .hljs-link_label {
+  color:#a5c261
+}
+.hljs-subst {
+  color:#519f50
+}
+.hljs-tag, .hljs-tag .hljs-keyword, .hljs-tag .hljs-title, .hljs-doctype, .hljs-sub .hljs-identifier, .hljs-pi, .input_number {
+  color:#e8bf6a
+}
+.hljs-identifier {
+  color:#d0d0ff
+}
+.hljs-class .hljs-title, .haskell .hljs-type, .smalltalk .hljs-class, .hljs-javadoctag, .hljs-yardoctag, .hljs-phpdoc {
+  text-decoration:none
+}
+.hljs-constant {
+  color:#da4939
+}
+.hljs-symbol, .hljs-built_in, .ruby .hljs-symbol .hljs-string, .ruby .hljs-symbol .hljs-identifier, .markdown .hljs-link_url, .hljs-attribute {
+  color:#6d9cbe
+}
+.markdown .hljs-link_url {
+  text-decoration:underline
+}
+.hljs-params, .hljs-variable, .clojure .hljs-attribute {
+  color:#d0d0ff
+}
+.css .hljs-tag, .hljs-rules .hljs-property, .hljs-pseudo, .tex .hljs-special {
+  color:#cda869
+}
+.css .hljs-class {
+  color:#9b703f
+}
+.hljs-rules .hljs-keyword {
+  color:#c5af75
+}
+.hljs-rules .hljs-value {
+  color:#cf6a4c
+}
+.css .hljs-id {
+  color:#8b98ab
+}
+.hljs-annotation, .apache .hljs-sqbracket, .nginx .hljs-built_in {
+  color:#9b859d
+}
+.hljs-preprocessor, .hljs-preprocessor *, .hljs-pragma {
+  color:#8996a8!important
+}
+.hljs-hexcolor, .css .hljs-value .hljs-number {
+  color:#a5c261
+}
+.hljs-title, .hljs-decorator, .css .hljs-function {
+  color:#ffc66d
+}
+.diff .hljs-header, .hljs-chunk {
+  background-color:#2f33ab;
+  color:#e6e1dc;
+  display:inline-block;
+  width:100%
+}
+.diff .hljs-change {
+  background-color:#4a410d;
+  color:#f8f8f8;
+  display:inline-block;
+  width:100%
+}
+.hljs-addition {
+  background-color:#144212;
+  color:#e6e1dc;
+  display:inline-block;
+  width:100%
+}
+.hljs-deletion {
+  background-color:#600;
+  color:#e6e1dc;
+  display:inline-block;
+  width:100%
+}
+.coffeescript .javascript, .javascript .xml, .tex .hljs-formula, .xml .javascript, .xml .vbscript, .xml .css, .xml .hljs-cdata {
+  opacity:.7
+}
